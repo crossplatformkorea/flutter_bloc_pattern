@@ -2,10 +2,10 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../screens/sample.dart';
 import '../shared/btn.dart';
 import '../utils/theme.dart' as Theme;
 import '../blocs/bloc_provider.dart';
-import '../blocs/auth_bloc.dart';
 
 class Login extends StatefulWidget {
   Login({Key key}) : super(key: key);
@@ -15,7 +15,6 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  AuthBloc authBloc = AuthBloc();
   final formKey = GlobalKey<FormState>();
   String _email;
   String _password;
@@ -81,6 +80,11 @@ class _LoginState extends State<Login> {
                       ),
                       autocorrect: false,
                       onSaved: (val) => _email = val,
+                      validator: (val) {
+                        if (val.length == 0) {
+                          return 'Please type in your password.';
+                        }
+                      },
                     ),
                       margin: const EdgeInsets.only(top: 112.0),
                     ),
@@ -109,12 +113,7 @@ class _LoginState extends State<Login> {
                       Expanded(child:
                       Btn(
                         text: 'SIGN UP',
-                        onPress: () {
-                          Navigator.pushNamed(
-                            context,
-                            '/sign_up',
-                          );
-                        },
+                        onPress: () {},
                         height: 60.0,
                         fontSize: 16.0,
                         color: Theme.Colors.accent,
@@ -143,12 +142,7 @@ class _LoginState extends State<Login> {
                     ),
                     Container(child:
                     FlatButton(
-                      onPressed: () {
-                        Navigator.pushNamed(
-                          context,
-                          '/forgot_pw',
-                        );
-                      },
+                      onPressed: () {},
                       child: Text(
                         'Forgot password?',
                         style: TextStyle(
@@ -186,5 +180,11 @@ class _LoginState extends State<Login> {
       // and are saved to _email and _password fields.
       print('login');
     }
+
+    Navigator.of(context).push(
+      MaterialPageRoute(builder: (context) {
+        return Sample();
+      }),
+    );
   }
 }
