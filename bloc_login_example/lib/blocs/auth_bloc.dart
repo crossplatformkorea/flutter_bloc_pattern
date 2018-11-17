@@ -5,10 +5,13 @@ enum Gender {
 }
 
 class AuthBloc extends Object {
+  final _loggedIn = StreamController<bool>.broadcast();
   final _doneLoading = StreamController<bool>.broadcast();
 
+  Stream<bool> get loggedIn => _loggedIn.stream;
   Stream<bool> get doneLoading => _doneLoading.stream;
 
+  Function(bool) get setLoggedIn => _loggedIn.sink.add;
   Function(bool) get setLoading => _doneLoading.sink.add;
 
   AuthBloc() {
@@ -22,6 +25,7 @@ class AuthBloc extends Object {
   }
 
   dispose() {
+    _loggedIn.close();
     _doneLoading.close();
   }
 }

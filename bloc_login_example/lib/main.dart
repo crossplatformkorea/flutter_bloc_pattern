@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'blocs/bloc_provider.dart' show BlocProvider;
-import 'screens/login.dart' show Login;
+import 'screens/auth.dart' show Auth;
 
 void main() => runApp(new MyApp());
 
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
           // counter didn't reset back to zero; the application is not restarted.
           primarySwatch: Colors.blue,
         ),
-        home: Login(),
+        home: Auth(),
       ),
     );
   }

@@ -26,6 +26,15 @@ class Sample extends StatelessWidget {
             Container(height: 12.0),
             Text('SampleChild3'),
             SampleChild3(),
+            FlatButton(
+              onPressed: () => BlocProvider.of(context).authBloc.setLoggedIn(false),
+              child: Text('Logout',
+                style: TextStyle(
+                  fontSize: 18.0,
+                  color: Colors.blue,
+                ),
+              ),
+            ),
           ],
         ),
       ),

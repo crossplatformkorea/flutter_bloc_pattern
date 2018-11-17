@@ -2,10 +2,10 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../blocs/bloc_provider.dart';
 import '../screens/sample.dart';
 import '../shared/btn.dart';
 import '../utils/theme.dart' as Theme;
-import '../blocs/bloc_provider.dart';
 
 class Login extends StatefulWidget {
   Login({Key key}) : super(key: key);
@@ -24,7 +24,7 @@ class _LoginState extends State<Login> {
   void initState() {
     super.initState();
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(
-        statusBarIconBrightness: Brightness.dark
+        statusBarIconBrightness: Brightness.dark,
     ));
   }
 
@@ -131,7 +131,8 @@ class _LoginState extends State<Login> {
                             color: Colors.white,
                           ),
                         ),
-                        onPressed: () { _submit(context); },
+                        onPressed: () => _setLoggedIn(),
+                        // onPressed: () { _submit(context); },
                         color: Theme.Colors.primary,
                       ),
                         height: 60.0,
@@ -168,6 +169,10 @@ class _LoginState extends State<Login> {
         ),
       ),
     );
+  }
+
+  void _setLoggedIn() {
+    BlocProvider.of(context).authBloc.setLoggedIn(true);
   }
 
   void _submit(BuildContext context) {
