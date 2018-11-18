@@ -27,7 +27,10 @@ class Sample extends StatelessWidget {
             Text('SampleChild3'),
             SampleChild3(),
             FlatButton(
-              onPressed: () => BlocProvider.of(context).authBloc.setLoggedIn(false),
+              onPressed: () {
+                BlocProvider.of(context).authBloc.setContext(context);
+                BlocProvider.of(context).authBloc.setLoggedIn(false);
+              },
               child: Text('Logout',
                 style: TextStyle(
                   fontSize: 18.0,

@@ -172,6 +172,7 @@ class _LoginState extends State<Login> {
   }
 
   void _setLoggedIn() {
+    BlocProvider.of(context).authBloc.setContext(context);
     BlocProvider.of(context).authBloc.setLoggedIn(true);
   }
 

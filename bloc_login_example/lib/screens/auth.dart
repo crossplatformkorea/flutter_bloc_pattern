@@ -20,18 +20,12 @@ class _AuthState extends State<Auth> {
     _checkAuth();
   }
 
-  @override
-  void dispose() {
-    BlocProvider.of(context).authBloc.dispose();
-    super.dispose();
-  }
-
  @override
   Widget build(BuildContext context) {
     return StreamBuilder(
-      stream: BlocProvider.of(context).authBloc.loggedIn,
+      stream: BlocProvider.of(context).authBloc.doneLoading,
       builder: (context, snapshot) {
-        if (!snapshot.hasData) {
+        if (!snapshot.hasData || !snapshot.data) {
           return Container(
             color: Theme.Colors.blue,
             width: double.infinity,
@@ -45,17 +39,29 @@ class _AuthState extends State<Auth> {
               ),
             )),
           );
-        } else if (snapshot.data) {
-          return Sample();
-        } else {
-          return Login();
         }
+        return Container(
+          color: Theme.Colors.blue,
+          width: double.infinity,
+          height: double.infinity,
+          child: Center(child: Text(
+            'You should not see this.',
+            style: TextStyle(
+              fontSize: 32.0,
+              color: Colors.white,
+              decorationStyle: TextDecorationStyle.solid,
+            ),
+          )),
+        );
       },
     );
   }
 
-  _checkAuth() async {
-    await Future.delayed(Duration(seconds: 3));
-    BlocProvider.of(context).authBloc.setLoggedIn(true);
+  _checkAuth() {
+    Future.delayed(Duration.zero, () async {
+      BlocProvider.of(context).authBloc.setContext(context);
+      await Future.delayed(Duration(seconds: 3));
+      BlocProvider.of(context).authBloc.setLoggedIn(true);
+    });
   }
 }
