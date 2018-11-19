@@ -113,7 +113,7 @@ class _LoginState extends State<Login> {
                       Expanded(child:
                       Btn(
                         text: 'SIGN UP',
-                        onPress: () {},
+                        onPress: () => Navigator.of(context).pushNamed('/review'),
                         height: 60.0,
                         fontSize: 16.0,
                         color: Theme.Colors.accent,

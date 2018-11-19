@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'blocs/bloc_provider.dart' show BlocProvider;
 import 'screens/auth.dart' show Auth;
+import 'screens/review.dart' show Review;
 
 void main() => runApp(new MyApp());
 
@@ -24,6 +25,9 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home: Auth(),
+        routes: {
+          '/review': (BuildContext context) => Review(),
+        }
       ),
     );
   }
