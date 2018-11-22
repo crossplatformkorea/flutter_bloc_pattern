@@ -21,6 +21,7 @@ class AuthBloc extends Object {
 
   AuthBloc() {
    loggedIn.listen((bool result) {
+     print('loggedIn: $result');
      if (_context != null) {
        Navigator.pushReplacement(
        _context,

@@ -112,7 +112,7 @@ class _LoginState extends State<Login> {
                     Row(children: <Widget>[
                       Expanded(child:
                       Btn(
-                        text: 'SIGN UP',
+                        text: 'REVIEW',
                         onPress: () => Navigator.of(context).pushNamed('/review'),
                         height: 60.0,
                         fontSize: 16.0,

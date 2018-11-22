@@ -9,6 +9,7 @@ class SampleBloc extends Object {
 
   SampleBloc() {
     init();
+    setMessage('test');
   }
 
   init() {

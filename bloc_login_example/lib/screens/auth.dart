@@ -61,7 +61,7 @@ class _AuthState extends State<Auth> {
     Future.delayed(Duration.zero, () async {
       BlocProvider.of(context).authBloc.setContext(context);
       await Future.delayed(Duration(seconds: 3));
-      BlocProvider.of(context).authBloc.setLoggedIn(true);
+      BlocProvider.of(context).authBloc.setLoggedIn(false);
     });
   }
 }
