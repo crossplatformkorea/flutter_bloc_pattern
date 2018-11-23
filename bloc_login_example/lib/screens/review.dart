@@ -1,9 +1,7 @@
 import 'dart:async';
 import 'package:async/async.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:bloc_login_example/blocs/review_bloc.dart';
-import 'package:bloc_login_example/blocs/bloc_provider.dart';
 
 class Review extends StatefulWidget {
   @override
@@ -25,24 +23,27 @@ class _State extends State<Review> {
 
   @override
   Widget build(BuildContext context) {
-    var bloc = BlocProvider.of(context);
-    return StreamBuilder(
+    return Container(
+      child: StreamBuilder(
       stream: _stream,
       builder: (context, snapshot) {
-        print('snapshot');
-        print(snapshot);
-        return Container(
-          width: 200.0,
-          color: Colors.white,
+        if (!snapshot.hasData) {
+          return Container();
+        }
+        return SizedBox(
+          width: 800.0,
+          height: 600.0,
           child: Column(
             children: <Widget>[
-              Text('myUserId: ${snapshot.data[0]}'),
-              Text('message: ${snapshot.data[1]}'),
+              Text('userId: ', textDirection: TextDirection.ltr),
+              Text('${snapshot.data[0]}', textDirection: TextDirection.ltr),
+              Text('message: ', textDirection: TextDirection.ltr),
+              Text('${snapshot.data[1]}', textDirection: TextDirection.ltr),
             ],
           ),
         );
       },
-    );
+    ));
   }
 
   @override
