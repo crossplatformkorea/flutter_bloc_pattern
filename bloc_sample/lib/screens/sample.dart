@@ -6,7 +6,7 @@ import '../blocs/bloc_provider.dart';
 import '../blocs/sample_bloc.dart';
 
 class Sample extends StatelessWidget {
-  final SampleBloc bloc = SampleBloc();
+//  final SampleBloc bloc = SampleBloc();
 
   @override
   Widget build(BuildContext context) {
