@@ -89,7 +89,7 @@
       <file leaf-file-name="review.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/screens/review.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="464">
               <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
@@ -101,10 +101,9 @@
       <file leaf-file-name="widget_test.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/widget_test.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+            <state relative-caret-position="116">
+              <caret line="17" column="9" selection-start-line="14" selection-end-line="33" selection-end-column="5" />
               <folding>
-                <element signature="e#0#1899#0" expanded="true" />
                 <element signature="e#353#387#0" expanded="true" />
               </folding>
             </state>
@@ -159,9 +158,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="8" />
-    <option name="y" value="57" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="59" />
+    <option name="y" value="58" />
     <option name="width" value="2379" />
     <option name="height" value="1836" />
   </component>
@@ -170,6 +169,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
@@ -218,7 +218,6 @@
         </subPane>
         <option name="show-excluded-files" value="false" />
       </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -377,8 +376,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="8" y="57" width="2379" height="1836" extended-state="0" />
-    <editor active="true" />
+    <frame x="59" y="62" width="2379" height="1836" extended-state="0" />
     <layout>
       <window_info anchor="bottom" id="Android Profiler" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" order="5" />
@@ -388,8 +386,8 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Dart Analysis" order="8" weight="0.38592964" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.6012739" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.6012739" />
       <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.46687898" />
       <window_info anchor="right" id="Flutter Outline" order="3" />
       <window_info anchor="bottom" id="Logcat" order="10" />
@@ -400,8 +398,8 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Device File Explorer" order="3" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3998808" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3998808" />
       <window_info anchor="right" id="Flutter Inspector" order="3" weight="0.32941988" />
       <window_info anchor="bottom" id="Messages" order="14" weight="0.329559" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -467,8 +465,13 @@
           <line>23</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/test/widget_test.dart</url>
+          <line>15</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -869,7 +872,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/screens/review.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="464">
           <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
@@ -879,10 +882,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/widget_test.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+        <state relative-caret-position="116">
+          <caret line="17" column="9" selection-start-line="14" selection-end-line="33" selection-end-column="5" />
           <folding>
-            <element signature="e#0#1899#0" expanded="true" />
             <element signature="e#353#387#0" expanded="true" />
           </folding>
         </state>
